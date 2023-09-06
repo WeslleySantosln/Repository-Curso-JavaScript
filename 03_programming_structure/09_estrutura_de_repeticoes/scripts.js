@@ -19,9 +19,9 @@ do{
         resp = "S";
     }
     while(resp.toUpperCase() != "S" ){
-        do{
-            resp = prompt("Digite um parametro correto! [S ou N]");
-        }while(resp.toUpperCase() != "S" || resp.toUpperCase() != "SIM");
+        
+        resp = prompt("Digite um parametro correto! [S ou N]");
+        
     }
     pp = pp + 1;
 }while(resp.toUpperCase() == "SIM" || resp.toUpperCase() == "s".toUpperCase() );
