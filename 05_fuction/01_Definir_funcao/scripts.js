@@ -1,6 +1,6 @@
 //  ---------------- Aula 01 -----------------------  \\
 console.log("");
-console.log("//  ---------------- Aula 01 -----------------------  \\");
+console.log("//  ---------------- Aula 01 -----------------------  ");
 
 function imprimirNoConsole(){
     console.log("Hello Word!");
@@ -28,7 +28,7 @@ numeroAleatorio();
 
 //  ---------------- Aula 02 -----------------------  \\
 console.log("");
-console.log("//  ---------------- Aula 02 -----------------------  \\");
+console.log("//  ---------------- Aula 02 ----------------------- ");
 
 function podeDirigir(idade,cnh,nome){
     if(idade >= 18 && cnh == true){
@@ -54,12 +54,87 @@ podeDirigir(19,1,"Ana");
 
 //  ---------------- Aula 03 -----------------------  \\
 console.log("");
-console.log("//  ---------------- Aula 03 -----------------------  \\");
+console.log("//  ---------------- Aula 03 -----------------------  ");
 
 let x = "maria";
 
-function f (){
-  return "ana";  
+function f(){
+    let x = "leticia";
+    console.log(x); 
+
 }
 
-let
+console.log(x);
+f();
+
+//  ---------------- Aula 04 -----------------------  \\
+console.log("");
+console.log("//  ---------------- Aula 04 -----------------------  ");
+
+let consoleTeste = () =>{
+    console.log("Olá mundo!");   
+};
+
+consoleTeste();
+
+let soma = (a, b) =>{
+    return a + b;
+};
+
+console.log(soma(10,20));
+
+const raizCu = (x) =>{
+     xz = x * x * x;
+     return xz;
+
+}
+
+const raizQua = x => x * x;
+
+
+console.log(raizCu(2));
+console.log(raizQua(2));
+
+//  ---------------- Aula 05 -----------------------  \\
+console.log("");
+console.log("//  ---------------- Aula 05 -----------------------  ");
+
+function dados(nome, idade){
+    if( idade === undefined){
+        console.log("Seu nome é: " + nome);
+
+    }else{
+        console.log("seu nome é: " + nome + " e Sua idade é: " + idade);
+
+    }
+}
+
+dados("Weslley");
+dados("weslley", 18);
+
+
+function repetirFrases(frase, qtd = 2 ){ 
+    for( i = 1; i <= qtd; i++){
+        console.log(frase);
+    }
+    r = prompt("Quer repetir ? [SIM || NÃO]");
+    querRepetir(r, frase);
+
+};
+
+
+repetirFrases("Hello world!", 3);
+
+function querRepetir(r, fra){
+    if(r.toUpperCase() == "SIM" || r.toUpperCase() == "S"  ){
+        console.log(fra);
+        r = prompt("Quer repetir ? [SIM || NÃO]");
+        querRepetir(r, fra);
+    }else{
+        console.log("Ativide parou");
+    }
+};
+
+
+
+
