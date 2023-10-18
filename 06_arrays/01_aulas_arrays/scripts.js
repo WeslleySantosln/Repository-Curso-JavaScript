@@ -41,15 +41,15 @@ let carro = {
         };
 
         if(motor == true ){
-            console.log("ligado");
+            console.log("Motor ligado");
         }else{
-            motor = prompt("Chave de acesso invalida, digite novamente!");
-            carro.testeDriver(motor);
+            chave = prompt("Chave de acesso invalida, digite novamente!");
+            carro.testeDriver(chave);
         }
     }
 };
 
-let carroPremiu = {
+let carroPremium = {
     tetoSolar: true,
     banco: "couro",
     valor: carro.valor * 3
@@ -58,20 +58,30 @@ let carroPremiu = {
 
 
 
-
+console.log("------- Carro normal: --------");
 console.log("Carro normal cor: " + carro.cor);
 console.log("Carro normal aro: " + carro.aro);
 console.log("Carro normal vidros: " + carro.vidrosETravas);
-console.log("Carro normal valor: " + carro.valor);
-console.carro.testeDriver(1533);
+console.log("Carro normal valor: R$" + carro.valor);
+carro.testeDriver(1533);
 
 carro.tetoSolar = false;
 
-console.log(carro.tetoSolar);
+console.log("Teto solar: " + carro.tetoSolar);
 
-Object.assign(carroPremiu, carro);
 
-console.log(carroPremiu);
+
+
+
+
+console.log("------- Carro premium: --------");
+
+
+
+
+
+
+
 
 
 //  ----------------------------- Aula 03 ------------------------  \\
