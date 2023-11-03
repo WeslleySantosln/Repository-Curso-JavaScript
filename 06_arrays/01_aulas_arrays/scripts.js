@@ -101,7 +101,7 @@ console.log(Object.keys(carroPremiumB));
 console.log("");
 console.log("//  ---------------- Aula 03-----------------------  ");
 
-let filaDoPao = ["one", "twe" , "tre" , "four" , "five" ];
+let filaDoPao = ["one", "twe" , "tre" , "four" , "five","tre","five" ];
 
 
 filaDoPao.forEach(fila => {
@@ -173,7 +173,163 @@ filaDoPao.forEach(fila => {
     console.log(fila); 
 });
 
+
+//Retorna a posição do valor procurado
+console.log();
+console.log("//Retornar a posição do valor procurado");
+
+console.log(filaDoPao.indexOf("five")); //Retorna o primeiro
+console.log(filaDoPao.lastIndexOf("four")); //Retorna o ultimo
+console.log(filaDoPao.lastIndexOf("five")); //Retorna o ultimo
+
+
+//Retornar um array apartir de outro array determinado por parâmentros
+console.log();
+console.log("//Retornar um array apartir de outro array determinado por parâmentros");
+
+console.log(filaDoPao.slice(2,4)); 
+console.log(filaDoPao.slice(2)); //Quando não há o segundo parâmentro o array seguirá até o fim
+console.log(filaDoPao.slice(-2,)); //Começando de trás para frente(Contando os dois ultimos)
+console.log(filaDoPao.slice(1, -2,)); //Retirando os 2 ultimos elementos do array
+
+//Checando se o valor pertece ao array
+console.log();
+console.log("//Checando se o valor pertece ao array");
+
+console.log(filaDoPao.includes("four"));
+console.log(filaDoPao.includes("six"));
+
+//inverte as posições do array
+console.log();
+console.log("//inverte as posições do array");
+
+console.log(filaDoPao.reverse());
+
+
+
 //  ----------------------------- Aula 04 ------------------------  \\
 console.log("");
 console.log("//  ---------------- Aula 04-----------------------  ");
+console.log("");
+
+
+
+let nome = "         Matheus";
+
+let nomeCorrigido = nome.trim(); //Remove tudo que não é String
+
+console.log("Olá, " + nome + " Seja bem vindo!");
+console.log("Olá, " + nomeCorrigido + " Seja bem vindo!");
+
+
+//  ----------------------------- Aula 05 ------------------------  \\
+console.log("");
+console.log("//  ---------------- Aula 05-----------------------  ");
+console.log("");
+
+let idDoUsuario = "35";
+
+let idBD = idDoUsuario.padStart(6,"0"); //Acrescenta dados a String para atingir o numero de caracteres estabelecido
+
+console.log(idDoUsuario);
+console.log(idBD);
+
+
+//  ----------------------------- Aula 05 ------------------------  \\
+console.log("");
+console.log("//  ---------------- Aula 05-----------------------  ");
+console.log("");
+
+let frase = "Testando o método split";
+
+console.log(frase.split(" ")); //Divide o texto e converte em array, determinado pelo separado.
+
+let produtos = "banana;maçã;pera;uva;manga;abacaxi";
+
+let produto = produtos.split(";");
+
+console.log(produto);
+
+//  ----------------------------- Aula 05 ------------------------  \\
+console.log("");
+console.log("//  ---------------- Aula 05-----------------------  ");
+console.log("");
+
+let palavras = "Testando o méteodo join";
+
+let ar = palavras.split(" ");
+
+console.log(ar);
+
+let jn = ar.join("@"); //Junta os elementos do array, elemento da junção é determinado pelo paramentro.
+
+console.log(jn);
+
+
+
+
+//  ----------------------------- Aula 06 ------------------------  \\
+console.log("");
+console.log("//  ---------------- Aula 06 -----------------------  ");
+console.log("");
+
+
+let vl1 = "daniel";
+let vl2 = "islanny";
+let vl3 = "weslley";
+let vl4 = "maria";
+let vl5 = "bonfim";
+let vl6 = "samaritano";
+let vl7 = "adalin";
+
+
+//rest operador, para representar uma quantidade de argumentos em aberto é usado o argumento ( ...), na criação da função.
+function imprimir(...args){
+    for( let i = 0 ; i < args.length; i++){
+        console.log(args[i]);
+        console.log("");
+    };
+
+
+};
+
+imprimir(vl1, vl2, vl3, vl4, vl5, vl6, vl7);
+console.log("");
+imprimir(1,2,3,4,5,6,7,8,9,10);
+
+
+//  ----------------------------- Aula 07 ------------------------  \\
+console.log("");
+console.log("//  ---------------- Aula 07 -----------------------  ");
+console.log("");
+
+
+//JSON
+let pessoa = {
+    "nome": "Matheus",
+    "idade": 28,
+    "carteirade" : true,
+    "profissao" : "Programador",
+    "Hobbies" : ["Gamer", "Musica", "Musculação", "Natação" ]
+};
+
+console.log(pessoa);
+console.log(pessoa.nome);
+console.log(pessoa.idade);
+console.log(pessoa.carteirade);
+console.log(pessoa.profissao);
+console.log(pessoa.Hobbies);
+
+console.log("");
+
+let pessoaTexto = JSON.stringify(pessoa);  //Transforma JSON em String
+
+console.log("isso é uma String: " + pessoaTexto);
+
+console.log("")
+
+let pessoaJSON = JSON.parse(pessoaTexto); //Transforma String em JSON
+
+console.log(pessoaJSON);
+
 
