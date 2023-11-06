@@ -144,8 +144,7 @@ filaDoPao.forEach(fila => {
 
 
 
-//CLIENTE VOLTOU PORQUE O TROCO TAVA ERRADO
-filaDoPao.unshift("twe");
+filaDoPao.unshift("twe"); //acrescenta no começo
 console.log();
 console.log("//Cliente voltou porque o troco tava errado");
 
@@ -155,8 +154,8 @@ filaDoPao.forEach(fila => {
 
 
 
-//ULTIMO CLIENTE DESISTIU PORQUE TAVA DEMORANDO PRA FILA ANDAR
-filaDoPao.pop();
+
+filaDoPao.pop(); //remove do final
 console.log();
 console.log("//Ultimo cliente desistiu porque a fila tava demorando para andar");
 
