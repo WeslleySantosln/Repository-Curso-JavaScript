@@ -332,3 +332,59 @@ let pessoaJSON = JSON.parse(pessoaTexto); //Transforma String em JSON
 console.log(pessoaJSON);
 
 
+//  ---------------- Aula 01 -----------------------  \\
+console.log("");
+console.log("//  ---------------- Aula 01 -----------------------  ");
+
+
+/* Remover elementos duplicados de um array
+Crie uma função chamada removeDuplicates que recebe como parâmetro um array de elementos.
+
+A função deve remover os elementos duplicados do array, mantendo apenas as ocorrências únicas. */
+
+function removeDuplicates(...arr){
+    
+    let n = [];
+    
+
+    arr.forEach(x => {
+        if(!n.includes(x)){
+            n.push(x);
+            
+        };
+    });  
+    
+    return n;
+};
+
+console.log(removeDuplicates(1,2,1,5));
+
+
+
+
+/* Escreva uma função chamada sumUniqueNumbers que recebe um array de números como argumento.
+
+A função deve calcular e retornar a soma de todos os números que aparecem apenas uma vez no array.
+
+Utilize uma estrutura de dados auxiliar para armazenar a contagem de cada número no array.
+
+Percorra o array e verifique se cada número ocorre apenas uma vez. Se sim, some-o à variável de soma.
+
+Considere que o array pode conter tanto números inteiros positivos quanto negativos. */
+
+function sumUniqueNumbers(...arr){
+    
+    let n = [];
+    let nn = 0;
+
+    arr.forEach(x => {
+        if(!n.includes(x)){
+            n.push(x);
+            nn = nn + x;
+        };
+    });  
+    
+    return nn;
+};
+
+console.log(sumUniqueNumbers(1,2,1,5));
