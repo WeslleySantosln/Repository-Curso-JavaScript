@@ -22,7 +22,7 @@ function corRandom(){
     }
 
     return color;    
-}
+};
 
 
 function borderRandom(){  
@@ -30,23 +30,24 @@ function borderRandom(){
     color = color + corRandom();
 
     return color;    
-}
+};
 
 
 
 
-function tema(e){  
+function temaEscuro(e){  
     gf.style.color = "white"; 
     gf.style.background = "black";
     console.log(e);
     
-} 
+};
 
 
-btn.addEventListener("click", tema);
+
+btn.addEventListener("click", temaEscuro);
 
 
-btn2.addEventListener("click", function tema(event){  
+btn2.addEventListener("click",function tema(event){  
     gf.style.color = "black"; 
     gf.style.background = "white";
     console.log(event)
@@ -54,8 +55,8 @@ btn2.addEventListener("click", function tema(event){
 
 
 btn3.addEventListener("click", function(){  
-    btn.removeEventListener("click", tema )
-    btn2.removeEventListener("click", tema ) //não enxerga a função tema dentro do event e não consegue remover
+    btn.removeEventListener("click", temaEscuro);
+    btn2.removeEventListener("click", tema ); //não enxerga a função tema dentro do event e não consegue remover
 });
 
 btn4.addEventListener("click", function(e){
@@ -71,11 +72,29 @@ pr.addEventListener("click", function(){
 
 
 
-
-
 //  ----------------------------- Aula 02 ------------------------  \\
 console.log(" ");
 console.log("//  ---------------- Aula 02 -----------------------  ");
 console.log(" ");
 
 
+window.addEventListener("keydown", function(e){
+    if(e.key == "e"){         
+        gf.style.color = corRandom(); 
+        gf.style.background = corRandom();         
+    };
+});
+
+window.addEventListener("keyup", function(e){
+    if(e.key == "r"){
+        temaEscuro();
+    };
+});
+
+
+window.addEventListener("scroll", function(e){
+    if(window.scrollY == 1000){         
+        gf.style.color = corRandom(); 
+        gf.style.background = corRandom();         
+    };
+});
