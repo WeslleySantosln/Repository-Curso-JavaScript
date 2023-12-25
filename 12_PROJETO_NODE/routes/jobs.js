@@ -1,11 +1,16 @@
-const express = require("express");
+const express = require('express');
 const router  = express.Router();
-const Job     = require("../models/Job");
+const Job     = require('../models/Job');
+
+// rota de test
+router.get('/test', (req, res) => {
+    res.send("deu certo");
+});
 
 
 
 // add job via post
-router.post("/add", (req, res) => {
+router.post('/add', (req, res) => {
 
     let {title, salary, company, description, email, new_job} = req.body;
 
@@ -18,10 +23,11 @@ router.post("/add", (req, res) => {
         email,
         new_job
     })
-    .then(() => res.redirect("/"))
-    .cath(err => console(err));
+    .then(() => res.redirect('/'))
+    .catch(err => console.log(err));
 
 
 });
 
 
+module.exports = router

@@ -1,6 +1,6 @@
 const express    = require('express');
 const app        = express();
-const db         = require("./db/connection");
+const db         = require("./db/connection.js");
 const bodyParser = require("body-parser");
 
 
@@ -27,8 +27,12 @@ db
         console.log("Erro ao conectar", err);
     });
 
+
 // routes
 app.get('/', (req, res) =>{
     res.send("Está funcionando 3");    
 
 });
+
+// jobs routes
+app.use("/jobs", require("./routes/jobs"));
